@@ -1,0 +1,1442 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:02:18] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:02:55] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:02:57] "GET /autores.html HTTP/1.1" 200 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x0000024BA07A2E50>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:03:03] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:03:09] "[32mPOST /agregarautor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:03:09] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:06:41] "GET /index.html HTTP/1.1" 200 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:06:46] "GET /autores.html HTTP/1.1" 200 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:06:53] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:07:03] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\Desktop\python\practica\app.py", line 38, in inicio
+    return render_template('index.html',autores=autores)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\Desktop\python\practica\templates\index.html", line 7, in top-level template code
+    <link rel="stylesheet" href="{{ url_for(filename='css/estilos.css' ) }}">
+TypeError: url_for() missing 1 required positional argument: 'endpoint'
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:09:43] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\Desktop\python\practica\app.py", line 38, in inicio
+    return render_template('index.html',autores=autores)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\Desktop\python\practica\templates\index.html", line 7, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('css', filename='estilos.css' ) }}">
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'css' with values ['filename']. Did you mean 'static' instead?
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:10:48] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:32] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:32] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:34] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:34] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:36] "GET /autores.html HTTP/1.1" 200 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:38] "GET /libros.html HTTP/1.1" 200 -
+DEBUG:app:cargando generos
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:39] "GET /generos.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:12:20] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:12:20] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:12:22] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:50] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:50] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:54] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:54] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:55] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:55] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:27] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:27] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:49] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:49] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:05] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:05] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:18] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:25] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:05] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:05] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:37] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:37] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:11] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:20] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:20] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:56] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:56] "GET /static/css/style.css HTTP/1.1" 200 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:22:03] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:22:42] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:22:42] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:08] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:09] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:25] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:25] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:46] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:47] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:24:11] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:24:11] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:12] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:12] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:40] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:42] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:51] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:51] "GET /static/css/style.css HTTP/1.1" 200 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BA973AC0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:54] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BAA69A90>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:59] "GET /editarautor/6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BAA690D0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:01] "GET /editarautor/7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:06] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000002D0BA9738E0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:07] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:09] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000002D0BAAA2E20>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:21] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:07] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BAA690D0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:12] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x0000018BA0C22D00>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:54] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:54] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001EC93762D00>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:29] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:29] "GET /static/css/style.css HTTP/1.1" 200 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:35] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001EC93762A90>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:36] "GET /editarautor/6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001EC937A27F0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:37] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:43] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000001EC937629A0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:45] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:15] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:18] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x0000017AA7051AF0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:19] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:21] "[33mGET /inicio HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001561CF23D00>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:03] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:05] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:53] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:54] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:23] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:24] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:26] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:27] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:28] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:01] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:02] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:40:26] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:40:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001E30422AD60>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:41:27] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:41:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001E3041536A0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:21] "GET /editarautor/6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a eliminar autor
+DEBUG:app:ID : 6 ,Nombre : javier2 ,Apellido: mondragon ,Email: cronwguard@gmail.com
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:50] "[32mGET /eliminarautor/6 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:50] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:53] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:08] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:09] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000001E304153670>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:25] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando generos
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:41] "GET /generos.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:58] "GET /agregargenero HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editargenero.html mandando:
+DEBUG:app:<forms.GeneroForm object at 0x000001E304153490>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:06] "GET /editargenero/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:45] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:46] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:47] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:48] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:49] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:45] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:48] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001B604975360>
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:50] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:57] "[32mPOST /agregarautor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:57] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:59] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:37:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:38:03] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 09:38:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando restaurantes
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 47, in restaurantes
+    return render_template('restaurantes.html',restaurantes=restaurantes)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\restaurantes.html", line 14, in top-level template code
+    <a href="{{url_for('agregarrestaurante')}}">Agregar</a>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'agregarrestaurante'. Did you mean 'agregarrestaurantes' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:30:10] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando restaurantes
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 47, in restaurantes
+    return render_template('restaurantes.html',restaurantes=restaurantes)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\restaurantes.html", line 14, in top-level template code
+    <a href="{{url_for('agregarrestaurante')}}">Agregar</a>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'agregarrestaurante'. Did you mean 'agregarrestaurantes' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:31:55] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando restaurantes
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 47, in restaurantes
+    return render_template('restaurantes.html',restaurantes=restaurantes)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\restaurantes.html", line 14, in top-level template code
+    <a href="{{url_for('agregarrestaurante')}}">Agregar</a>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'agregarrestaurante'. Did you mean 'agregarrestaurantes' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:34:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando restaurantes
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 47, in restaurantes
+    return render_template('restaurantes.html',restaurantes=restaurantes)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\restaurantes.html", line 14, in top-level template code
+    <a href="{{url_for('agregarrestaurante')}}">Agregar</a>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'agregarrestaurante'. Did you mean 'agregarrestaurantes' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:36:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:37:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:37:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:37:55] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:37:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:38:02] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:38:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:38:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:38:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:51] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:54] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:55] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarrestaurante.html mandando:
+DEBUG:app:<forms.RestauranteForm object at 0x000002072D18A500>
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:57] "GET /agregarrestaurante HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:39:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:40:21] "[32mPOST /agregarrestaurante HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:40:21] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:40:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:40:23] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:40:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarrestaurante.html mandando:
+DEBUG:app:<forms.RestauranteForm object at 0x000002072D283850>
+ERROR:app:Exception on /editarrestaurante/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 81, in editarrestaurante
+    return  render_template('editarrestaurante.html',forma =restauranteForm)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\editarrestaurante.html", line 30, in top-level template code
+    {{forma.encargado.label}}<br/>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'forms.RestauranteForm object' has no attribute 'encargado'
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:40:27] "[35m[1mGET /editarrestaurante/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:43:39] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:43:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarrestaurante.html mandando:
+DEBUG:app:<forms.RestauranteForm object at 0x00000160D46F5300>
+ERROR:app:Exception on /editarrestaurante/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 81, in editarrestaurante
+    return  render_template('editarrestaurante.html',forma =restauranteForm)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\editarrestaurante.html", line 30, in top-level template code
+    {{forma.encargado.label}}<br/>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'forms.RestauranteForm object' has no attribute 'encargado'
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:43:41] "[35m[1mGET /editarrestaurante/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:procediendo a editarrestaurante.html mandando:
+DEBUG:app:<forms.RestauranteForm object at 0x000002454FC29690>
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:44:20] "GET /editarrestaurante/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:44:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:44:24] "[32mPOST /editarrestaurante/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:44:24] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:44:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:32] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a eliminar restaurante
+DEBUG:app:ID : 1 ,Nombre : restaurante 2 ,Direccion: dovv cansas 123,Capacidad: 200,Gerente: javier rodriguez
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:36] "[32mGET /eliminarrestaurante/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:36] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:38] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:40] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:49:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:42] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:44] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarrestaurante.html mandando:
+DEBUG:app:<forms.RestauranteForm object at 0x000001B9B8DDAEF0>
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:47] "GET /agregarrestaurante HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:57] "[32mPOST /agregarrestaurante HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:57] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:59] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:57:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:58:01] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:58:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando empleados
+ERROR:app:Exception on /empleados.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 99, in empleados
+    return render_template('empleados.html',empleados=empleados)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\empleados.html", line 14, in top-level template code
+    <a href="{{url_for('agregarempleado')}}">Agregar</a>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'agregarempleado'. Did you mean 'agregarempleados' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:58:02] "[35m[1mGET /empleados.html HTTP/1.1[0m" 500 -
+DEBUG:app:cargando empleados
+ERROR:app:Exception on /empleados.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 99, in empleados
+    return render_template('empleados.html',empleados=empleados)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\templates\empleados.html", line 14, in top-level template code
+    <a href="{{url_for('agregarempleado')}}">Agregar</a>
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'agregarempleado'. Did you mean 'agregarempleados' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:58:10] "[35m[1mGET /empleados.html HTTP/1.1[0m" 500 -
+DEBUG:app:cargando comidas
+ERROR:app:Exception on /comidas.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 147, in comidas
+    return render_template('comida.html',comidas=comidas)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: comida.html
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 10:58:14] "[35m[1mGET /comidas.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:01] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando empleados
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:02] "GET /empleados.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:04] "GET /agregarempleado HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:15] "[32mPOST /agregarempleado HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:15] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando empleados
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:16] "GET /empleados.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:19] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando comidas
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:20] "GET /comidas.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:22] "GET /agregarcomida HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:30] "[32mPOST /agregarcomida HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:30] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando comidas
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:31] "GET /comidas.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:33] "[33mGET /editarcomida/1 HTTP/1.1[0m" 404 -
+DEBUG:app:cargando empleados
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:39] "GET /empleados.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarempleado.html mandando:
+DEBUG:app:<forms.EmpleadoForm object at 0x00000236D33681F0>
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:41] "GET /editarempleado/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:46] "[32mPOST /editarempleado/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:46] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando empleados
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:47] "GET /empleados.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a eliminar empleado
+DEBUG:app:ID : 1 ,Nombre : javier ,Cargo: mesero ,Salario: 1000
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:50] "[32mGET /eliminarempleado/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:50] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando empleados
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:52] "GET /empleados.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:53] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:54] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:58] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando comidas
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:59] "GET /comidas.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:00:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a eliminar comida
+DEBUG:app:ID : 1 ,Nombre : pato asado ,Precio: 200
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:01] "[32mGET /eliminarcomida/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:01] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando comidas
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:02] "GET /comidas.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:35] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando comidas
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:36] "GET /comidas.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:38] "GET /agregarcomida HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:44] "[32mPOST /agregarcomida HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:44] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando comidas
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:46] "GET /comidas.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarcomida.html mandando:
+DEBUG:app:<forms.ComidaForm object at 0x000001B3A54D8520>
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:47] "GET /editarcomida/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:49] "[32mPOST /editarcomida/2 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:49] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando comidas
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:51] "GET /comidas.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:01:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:16:06] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:16:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:16:08] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:16:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando empleados
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:16:11] "GET /empleados.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:16:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 43, in inicio
+    return redirect(url_for('login'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'Login' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:27:57] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:28:36] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:28:36] "GET /login.html HTTP/1.1" 200 -
+ERROR:app:Exception on /login.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 51, in login
+    return redirect(url_for('index'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:28:40] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /login.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 51, in login
+    return redirect(url_for('inicio'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:28] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:37] "GET /login.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:43] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:44] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:45] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:29:49] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:07] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:15] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:15] "GET /login.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:19] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:21] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:48] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:48] "GET /login.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:54] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:55] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:56] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:30:56] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:01] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:31] "[32mGET /index.html HTTP/1.1[0m" 302 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 41, in inicio
+    return redirect(url_for('index'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:31:46] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 41, in inicio
+    return redirect(url_for('index'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:02] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:03] "GET /login.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:05] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 41, in inicio
+    return redirect(url_for('index'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:05] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 41, in inicio
+    return redirect(url_for('index.html'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html'. Did you mean 'eliminarempleado' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:53] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:54] "GET /login.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:55] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 41, in inicio
+    return redirect(url_for('index.html'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html'. Did you mean 'eliminarempleado' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:32:55] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 41, in inicio
+    return redirect(url_for('index.html'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html'. Did you mean 'eliminarempleado' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:34:08] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:34:09] "GET /login.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:34:10] "GET /login.html HTTP/1.1" 200 -
+ERROR:app:Exception on /login.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 51, in login
+    return redirect(url_for('/'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/'. Did you mean 'static' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:34:15] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /login.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 51, in login
+    return redirect(url_for('/index.html'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/index.html'. Did you mean 'eliminarempleado' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:35:04] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /login.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 51, in login
+    return redirect(url_for('/index.html'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/index.html'. Did you mean 'eliminarempleado' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:35:07] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:35:48] "GET /login.html HTTP/1.1" 200 -
+ERROR:app:Exception on /login.html [POST]
+Traceback (most recent call last):
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\app.py", line 51, in login
+    return redirect(url_for('/index.html'))
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Javie\OneDrive\Escritorio\examen2-ejercicio3\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/index.html'. Did you mean 'eliminarempleado' instead?
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:35:54] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:36:45] "[33mPOST /login.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:36:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:36:50] "GET /static/css/style.css HTTP/1.1" 200 -
+DEBUG:app:cargando restaurantes
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:36:51] "GET /restaurantes.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:36:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarrestaurante.html mandando:
+DEBUG:app:<forms.RestauranteForm object at 0x000002526456DCC0>
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:36:54] "GET /editarrestaurante/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:36:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
